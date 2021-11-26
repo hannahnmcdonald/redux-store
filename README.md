@@ -49,7 +49,7 @@ THEN I find that the app uses Redux instead of the Context API
 
 **Cloud Platform:** Heroku
 
-** Other Technologies:**
+**Other Technologies:**
 1. Apollo Server
 1. Bcrypt
 1. Express 
