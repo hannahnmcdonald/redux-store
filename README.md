@@ -1,5 +1,7 @@
 # Redux Store
 
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+
 A React E-Commerce Site that uses redux to manage state and reducer functions. The code is reconfigured using Redux instead of Context API and useReducer hooks. 
 
 
@@ -76,6 +78,3 @@ This repository is under the MIT License.
 ## Questions?
 
 Contact me at hannahcodes@protonmail.com 📫 or through my Github profile [here.](https://github.com/hannahnmcdonald) ✨
-
-
-
