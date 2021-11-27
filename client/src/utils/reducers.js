@@ -1,3 +1,4 @@
+// USE REDUCER not needed from react
 // import { useReducer } from 'react';
 import {
   UPDATE_PRODUCTS,
