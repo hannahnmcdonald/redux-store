@@ -8,6 +8,10 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+// IMPORT provider from react-redux
+import { Provider } from 'react-redux';
+// IMPORT store from utils
+import store from './utils/store';
 
 // IMPORT Pages
 import Home from './pages/Home';
@@ -16,7 +20,8 @@ import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
-import { StoreProvider } from './utils/GlobalState';
+// Removed Store Provider, USE PROVIDER from react-redux
+// import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 
@@ -48,7 +53,8 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-          <StoreProvider>
+          {/* USE PROVIDER from REACT-REDUX instead of STORE PROVIDER */}
+          {/* <StoreProvider>
             <Nav />
             <Switch>
               <Route exact path="/" component={Home} />
@@ -59,7 +65,19 @@ function App() {
               <Route exact path="/products/:id" component={Detail} />
               <Route component={NoMatch} />
             </Switch>
-          </StoreProvider>
+          </StoreProvider> */}
+          <Provider store={store}>
+            <Nav />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/signup" component={Signup} />
+              <Route exact path="/success" component={Success} />
+              <Route exact path="/orderHistory" component={OrderHistory} />
+              <Route exact path="/products/:id" component={Detail} />
+              <Route component={NoMatch} />
+            </Switch>
+          </Provider>
         </div>
       </Router>
     </ApolloProvider>
