@@ -57,7 +57,7 @@ THEN I find that the app uses Redux instead of the Context API
 1. Express 
 1. Stripe
 1. Graphql 
-1. Json Web Tokens
+1. JSON Web Tokens
 1. React Router 
 1. Redux
 1. Service Workers

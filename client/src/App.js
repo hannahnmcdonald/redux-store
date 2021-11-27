@@ -1,3 +1,4 @@
+// IMPORT React, Router, Apollo
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import {
@@ -8,6 +9,7 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
+// IMPORT Pages
 import Home from './pages/Home';
 import Detail from './pages/Detail';
 import NoMatch from './pages/NoMatch';
@@ -18,10 +20,12 @@ import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 
+// CREATE HTTP Link
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
 
+// AUTH TOKEN
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
   return {
@@ -32,11 +36,13 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
+// APOLLO CLIENT
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
 
+// APP RENDER
 function App() {
   return (
     <ApolloProvider client={client}>
@@ -60,4 +66,5 @@ function App() {
   );
 }
 
+// EXPORT APP
 export default App;
