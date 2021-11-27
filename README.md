@@ -1,9 +1,7 @@
 # Redux Store
 
-
 A React E-Commerce Site that uses redux to manage state and reducer functions. The code is reconfigured using Redux instead of Context API and useReducer hooks. 
 
-![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## User Story
 ```
