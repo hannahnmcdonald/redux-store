@@ -63,7 +63,7 @@ THEN I find that the app uses Redux instead of the Context API
 
 ## Usage
 
-Deployed site: https://redux-store-hm.herokuapp.com
+Deployed site [here](https://redux-store-hm.herokuapp.com)
 
 
 ## License
