@@ -31,6 +31,8 @@ THEN I find that the app uses Redux instead of the Context API
 
 ##
 
+![Screenshot](./client/src/imgs/screenshot.png)
+
 
 ## Table of Contents
 1. [Technologies](##Technologies)
